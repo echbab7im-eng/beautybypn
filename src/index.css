@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+}
+
+/* Custom gorgeous scrollbar for feminine look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf8f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2d4d0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c8b4b0;
+}
+
+/* Base custom styles */
+body {
+  font-family: var(--font-sans);
+  background-color: #faf5f5;
+  background-image: radial-gradient(at 0% 0%, #fce7f3 0px, transparent 50%), radial-gradient(at 50% 0%, #fff1f2 0px, transparent 50%), radial-gradient(at 100% 0%, #fdf4ff 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #373331;
+}

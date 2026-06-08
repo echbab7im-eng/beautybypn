@@ -1,0 +1,6 @@
+{
+  "name": "BeautyByPnd",
+  "description": "Boutique en ligne élégante et féminine de parfums, cosmétiques, vêtements, sacs et montres. Mode chic, paiement à la livraison.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
