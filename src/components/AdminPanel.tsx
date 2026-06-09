@@ -231,15 +231,6 @@ export const AdminPanel: React.FC = () => {
             <p className="text-gray-400 text-[11px] mt-2">Accès restreint au traitement des données commerciales</p>
           </div>
 
-          {/* Test credentials helper container */}
-          <div className="bg-pink-50 p-3 rounded-xl border border-pink-100 text-left space-y-1">
-            <span className="text-[10px] uppercase font-bold text-pink-800 tracking-wider flex items-center gap-1">
-              <Sparkles className="w-3 h-3 text-pink-700 animate-bounce" /> Mode Simulation Directe iFrame :
-            </span>
-            <p className="text-[11px] text-gray-700">Email: <b className="select-all">admin@pnd.ma</b></p>
-            <p className="text-[11px] text-gray-700">Mot de passe: <b className="select-all">admin123</b></p>
-          </div>
-
           <form onSubmit={handleLogin} className="space-y-4 text-left">
             <div>
               <label className="block text-[10px] font-bold text-gray-450 uppercase tracking-widest mb-1.5 flex items-center gap-1">
