@@ -154,7 +154,7 @@ _(Livraison : ${order.total >= FREE_SHIPPING_THRESHOLD ? 'Gratuite' : '30 DH'})_
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
           <button
             onClick={() => navigateTo('shop', 'all')}
-            className="px-6 py-3 border border-pink-200 hover:bg-pink-100/50 text-pink-700 text-xs font-bold uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer"
+            className="px-6 py-3 bg-pink-950 hover:bg-pink-900 text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md shadow-pink-950/20"
             id="success-back-to-shop"
           >
             <CornerDownLeft className="w-4 h-4" />
@@ -162,11 +162,11 @@ _(Livraison : ${order.total >= FREE_SHIPPING_THRESHOLD ? 'Gratuite' : '30 DH'})_
           </button>
           
           <button
-            onClick={() => navigateTo('orders')}
-            className="px-6 py-3 bg-pink-950 hover:bg-pink-900 text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all shadow-md shadow-pink-950/20 cursor-pointer"
-            id="success-view-orders"
+            onClick={() => navigateTo('home')}
+            className="px-6 py-3 border border-pink-200 hover:bg-pink-100/50 text-pink-700 text-xs font-bold uppercase tracking-widest rounded-xl transition-all cursor-pointer"
+            id="success-go-home"
           >
-            Consulter l'historique de mes commandes
+            Retourner à l'accueil
           </button>
         </div>
       </div>

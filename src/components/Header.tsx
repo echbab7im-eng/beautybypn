@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useShop } from '../context/ShopContext';
-import { ShoppingBag, Heart, Menu, X, MessageSquare, History, Sparkles, Package } from 'lucide-react';
+import { ShoppingBag, Heart, Menu, X, MessageSquare, History, Sparkles, Package, Lock } from 'lucide-react';
 import { CONTACT_WHATSAPP_NUMBER } from '../data/products';
 
 interface HeaderProps {
@@ -21,9 +21,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart }) => {
   const navItems = [
     { label: 'Accueil', view: 'home' as const },
     { label: 'Catalogue', view: 'shop' as const },
-    { view: 'promotions' as const, label: 'Promotions' },
-    { label: 'Suivi de commande', view: 'tracking' as const },
-    { label: 'Contact & WhatsApp', view: 'contact' as const }
+    { label: 'Sourcing Perso', view: 'custom-request' as const },
+    { label: 'Blog Beauté', view: 'blog' as const },
+    { label: 'Politiques', view: 'policies' as const },
+    { label: 'Contact', view: 'contact' as const }
   ];
 
   const handleNavClick = (view: typeof activeView, category?: string) => {
@@ -103,31 +104,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart }) => {
               className={`p-2 rounded-full hover:bg-pink-100/40 relative transition-all duration-300 ${
                 activeView === 'admin' ? 'text-pink-700 bg-pink-100/30' : 'text-gray-600 hover:text-pink-700'
               }`}
-              title="Gérer les stocks et produits (Admin)"
+              title="Espace Administrateur"
               id="header-admin-btn"
             >
-              <Package className="w-5.5 h-5.5" />
-              <span className="absolute -top-1 -right-1.5 bg-pink-700 text-white text-[7px] font-bold px-1 py-0.5 rounded-full border border-white uppercase tracking-wider leading-none">
-                Stock
-              </span>
+              <Lock className="w-5 h-5" />
             </button>
-
-            {/* Orders History shortcut */}
-            {orders.length > 0 && (
-              <button
-                onClick={() => handleNavClick('orders')}
-                className={`p-2 rounded-full hover:bg-pink-100/40 relative transition-all duration-300 ${
-                  activeView === 'orders' ? 'text-pink-700 bg-pink-100/30' : 'text-gray-600 hover:text-pink-700'
-                }`}
-                title="Mes commandes récentes"
-                id="header-orders-history"
-              >
-                <History className="w-5.5 h-5.5" />
-                <span className="absolute -top-1 -right-1 bg-pink-700 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center border border-white">
-                  {orders.length}
-                </span>
-              </button>
-            )}
 
             {/* Wishlist Icon */}
             <button
@@ -187,22 +168,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart }) => {
               );
             })}
             
-            {/* Mobile-only Order History if any orders present */}
-            {orders.length > 0 && (
-              <button
-                onClick={() => handleNavClick('orders')}
-                className={`w-full text-left px-3 py-3 rounded-lg text-sm font-medium tracking-wide transition-all flex items-center gap-2 ${
-                  activeView === 'orders'
-                    ? 'text-pink-700 bg-pink-100/40 font-semibold'
-                    : 'text-gray-600 hover:text-pink-700'
-                }`}
-                id="nav-mobile-orders"
-              >
-                <History className="w-4 h-4" />
-                Mes Commandes ({orders.length})
-              </button>
-            )}
-
             {/* Mobile-only Admin Dashboard Access */}
             <button
               onClick={() => handleNavClick('admin')}
@@ -213,8 +178,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart }) => {
               }`}
               id="nav-mobile-admin"
             >
-              <Package className="w-4 h-4 text-pink-700" />
-              <span>Gérer Stock & Articles (Admin)</span>
+              <Lock className="w-4 h-4 text-pink-700" />
+              <span>Espace Administrateur</span>
             </button>
             
             {/* Quick WhatsApp contact on Mobile Menu */}

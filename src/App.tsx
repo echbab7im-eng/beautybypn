@@ -13,6 +13,9 @@ import { OrdersHistory } from './components/OrdersHistory';
 import { ProductCard } from './components/ProductCard';
 import { AdminPanel } from './components/AdminPanel';
 import { OrderTracking } from './components/OrderTracking';
+import { SourcingSect } from './components/SourcingSect';
+import { BlogSect } from './components/BlogSect';
+import { PoliciesSect } from './components/PoliciesSect';
 
 import { Sparkles, ArrowRight, Star, Heart, Check, X, ShieldAlert, Mail, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -324,6 +327,9 @@ const MainStoreContent: React.FC = () => {
         {activeView === 'orders' && <OrdersHistory />}
         {activeView === 'admin' && <AdminPanel />}
         {activeView === 'tracking' && <OrderTracking />}
+        {activeView === 'custom-request' && <SourcingSect />}
+        {activeView === 'blog' && <BlogSect />}
+        {activeView === 'policies' && <PoliciesSect />}
       </main>
 
       {/* Primary Floating Footer element */}

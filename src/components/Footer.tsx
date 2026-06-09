@@ -163,7 +163,7 @@ export const Footer: React.FC = () => {
                 className="text-pink-350 hover:text-white transition-colors focus:outline-none flex items-center gap-1 bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg justify-center md:justify-start cursor-pointer hover:bg-white/10"
               >
                 <Sparkles className="w-3.5 h-3.5 text-pink-400 animate-pulse" />
-                <span className="font-bold">Espace Admin (Stock)</span>
+                <span className="font-bold">Espace Administrateur</span>
               </button>
             </li>
           </ul>

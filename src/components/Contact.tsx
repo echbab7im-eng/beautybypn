@@ -98,15 +98,6 @@ export const Contact: React.FC = () => {
           <div className="bg-white/30 backdrop-blur-md border border-white/50 rounded-2xl p-6 space-y-5 shadow-sm shadow-pink-950/5">
             
             <div className="flex items-start gap-3.5">
-              <Phone className="w-5 h-5 text-pink-700 shrink-0 mt-0.5" />
-              <div>
-                <h4 className="text-xs font-bold uppercase tracking-wider text-pink-950">Téléphone Bureau</h4>
-                <p className="text-sm font-semibold text-gray-700 mt-0.5">+212 6 12 34 56 78</p>
-                <p className="text-[10px] text-gray-500">Du lundi au samedi (9h - 19h)</p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-3.5 border-t border-pink-100/50 pt-4">
               <Mail className="w-5 h-5 text-pink-700 shrink-0 mt-0.5" />
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-pink-950">E-mail Boutique</h4>

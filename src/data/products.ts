@@ -421,6 +421,6 @@ export const HERO_SLIDES = [
   }
 ];
 
-export const CONTACT_WHATSAPP_NUMBER = '212612345678'; // Example Moroccan WhatsApp number
+export const CONTACT_WHATSAPP_NUMBER = '34631276315'; // Store WhatsApp number
 export const INSTAGRAM_LINK = 'https://instagram.com/beautybypnd';
 export const FACEBOOK_LINK = 'https://facebook.com/beautybypnd';
